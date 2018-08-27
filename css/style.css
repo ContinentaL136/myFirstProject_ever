@@ -1,0 +1,443 @@
+/* Сброс стилей */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: gnyrwn971;
+    src: url('../fonts/gnyrwn971.ttf');
+}
+
+@font-face {
+    font-family: LEngineer-Regular;
+    src: url('../fonts/LEngineer-Regular.otf');
+}
+
+@font-face {
+    font-family: Zhizn;
+    src: url('../fonts/Zhizn.otf');
+}
+
+/* selection block (Отвечает за выделение текста мышкой) */
+
+::selection {
+    background: #383838;
+    color: #80ac6d;
+}
+
+::-moz-selection {
+    background: #383838;
+    color: #80ac6d;
+}
+
+::-webkit-selection {
+    background: #383838;
+    color: #80ac6d;
+}
+
+::-ms-selection {
+    background: #383838;
+    color: #80ac6d;
+}
+
+
+/* Навигация сайта */
+
+.wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    padding: 10px 0;
+    line-height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+}
+
+nav a {
+    color: whitesmoke;
+    font-size: 1.3em;
+    text-shadow: 0px 1px 1px #80AC6D;
+}
+
+nav a:hover {
+    color: #383838;
+    text-decoration: line-through #80AC6D;
+    transition: 0.2s;
+    text-shadow: 1px 1px 1px #80AC6D;
+}
+
+.made {
+    background-color: #383838;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0px 1px 8px 1px #383838;
+    transition: 2s;
+}
+
+.made:hover {
+    background-color: #80AC6D;
+    transition: 1s;
+    box-shadow: 0px 5px 8px 1px #383838;
+}
+
+.made a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav li {
+    font-family: gnyrwn971;
+    padding: 0 20px;
+    flex-basis: 150px;
+}
+
+header {
+    display: flex;
+}
+
+header.default {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.3);
+    box-shadow: 0px 1px 10px 1px #383838;
+}
+
+header.default a {
+    color: azure;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin: 5px 20px;
+}
+
+#mutebtn {
+    background: url('../img/iconmonstr-audio-8-16.png') no-repeat;
+    width: 20px;
+    height: 16px;
+}
+
+/* Главная страница */
+
+.main h1 {
+    font-family: Zhizn;
+    color: #383838;
+    text-align: center;
+    font-size: 4.5em;
+    padding: 400px 0 10px 0;
+    text-shadow: 1px 1px 1px #80AC6D;
+}
+
+.main h2 {
+    font-family: LEngineer-Regular;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0 0 30px 0;
+}
+
+.see_more {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: gnyrwn971;
+    font-size: 1.3em;
+}
+
+.see_more a {
+    flex-basis: 300px;
+    margin: 0 0 290px 0;
+    line-height: 40px;
+    background-color: #383838;
+    border-radius: 2px;
+    color: whitesmoke;
+    box-shadow: 0px 1px 8px 1px #383838;
+    transition: 2s;
+}
+
+.see_more a {
+     text-decoration: inherit;
+}
+
+.see_more a:hover {
+    background-color: #80ac6d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0px 5px 8px 1px #383838;
+}
+
+/* О нас */
+
+.about {
+    background-color: floralwhite;
+    padding: 0 0 130px 0;
+}
+
+.about h3 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: LEngineer-Regular;
+    padding: 30px 0;
+    color: #383838;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: gnyrwn971;
+    margin: 0 220px 0 220px;
+    padding: 0 0 30px 0;
+    color: #383838;
+    border-bottom: 1px solid rgba(56, 56, 56, 0.08);
+}
+
+/* Услуги */
+
+.service {
+    background-color: ghostwhite;
+}
+
+.service h3 {
+    text-align: center;
+    font-size: 2.4em;
+    font-family: LEngineer-Regular;
+    padding: 30px 0;
+    color: #383838;
+}
+
+.services {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services .service_item {
+    flex-basis: 300px;
+    padding: 70px;
+    font-family: gnyrwn971;
+    font-size: 1.3em;
+    color: #383838;
+    cursor: pointer;
+}
+
+.service_item img {
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.service_item img:hover {
+    transform: rotate3d(1,1,1,30deg);
+}
+
+/* Галерея */
+
+.gallery {
+    background-color: whitesmoke;
+}
+
+.gallery h3 {
+    text-align: center;
+    font-size: 2.4em;
+    font-family: LEngineer-Regular;
+    padding: 30px 0 50px 0;
+    color: #383838;
+}
+
+.gallery img {
+    width: 100%;
+    box-shadow: 1px 2px 5px 1px #383838;
+    transform: rotate3d(1,1,1,5deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: rotate3d(1,1,1,-2deg);
+    
+}
+
+.gall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0 50px 0;
+}
+
+.gall .gall_item {
+    perspective: 200px;
+    flex-basis: 290px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Форма заказа */
+
+.contact {
+    text-align: center;
+    background-color: floralwhite;
+    padding: 0 0 100px 0;
+}
+
+.contact h3 {
+    text-align: center;
+    font-size: 2.4em;
+    font-family: LEngineer-Regular;
+    padding: 30px 0 50px 0;
+    color: #383838;
+    border-top: 1px solid rgba(152, 152, 152, 0.26);
+}
+
+#p_h {
+    resize: none;
+    width: 36%;
+    min-height: 130px;
+    border-radius: 2px;
+    font-family: Zhizn;
+    font-weight: 900;
+    background-color: rgba(128, 172, 109, 0.18);
+    box-shadow: 1px 1px 5px 0px #383838;
+    transition: 1s;
+}
+
+.input_items {
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+}
+
+.input_items input {
+    border-radius: 2px;
+    padding: 8px 0 8px 0;
+    font-family: Zhizn;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 1px 1px 5px 0px #383838;
+    transition: 1s;
+}
+
+input {
+    background-color: rgba(128, 172, 109, 0.18);
+}
+
+input:hover {
+    background-color: rgba(128, 172, 109, 0.4);
+    transition: 1s;
+}
+
+#p_h:hover {
+    background-color: rgba(128, 172, 109, 0.4);
+    transition: 1s;
+}
+
+input:focus {
+    border-color: #383838;
+    outline: 0;
+}
+
+#p_h:focus {
+    border-color: #383838;
+    outline: 0;
+}
+
+.sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub .sub_item {
+    flex-basis: 300px;
+    line-height: 40px;
+    margin: 20px auto;
+    background-color: #383838;
+    border-radius: 2px;
+    color: whitesmoke;
+    box-shadow: 0px 1px 8px 1px #383838;
+    font-family: gnyrwn971;
+    font-size: 1.3em;
+    transition: 2s;
+}
+
+.sub_item:hover {
+    background-color: #80ac6d;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0px 5px 8px 1px #383838;
+}
+
+/* Оформление карты */
+
+#map {
+    margin: 0 auto;
+    width: 600px;
+    height: 300px;
+    padding-bottom: 100px;
+}
+
+.map_item h3 {
+    text-align: center;
+    font-size: 2.4em;
+    font-family: LEngineer-Regular;
+    padding: 100px 0 10px 0;
+    color: #383838;
+}
+
+/* Оформление подвала сайта */
+
+footer {
+    background-color: rgba(103, 136, 88, 0.46);
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.2em;
+    font-family: LEngineer-Regular;
+    color: #383838;
+    padding: 10px 0 10px 0;
+}
+
+footer img {
+    cursor: pointer;
+    padding: 30px 5px 10px 5px;
+    text-align: center;
+}
+
+

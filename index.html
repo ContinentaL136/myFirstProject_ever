@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Валенки - шептуны, брелоки на удачу</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="description" content="Валенки-шептуны, брелоки ручной работы, доставка почтовым отправлением">
+        <meta name="author" content="Zharkih Maxim">
+        <link rel="shortcut icon" type="image/x-icon" href="img/iconmonstr-building-10-96.png">
+        
+        <!--  Библеотека jquery -->
+	    <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+	    <script type="text/javascript">
+		$(document).ready(function(){
+			// Фикмированная шапка при скролле
+            $("header").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 40) {
+					$("header").addClass("default").fadeIn('slow');
+				} else {
+					$("header").removeClass("default").fadeIn('slow');
+				};
+			});
+			// Плавный скролл по якорям
+			$('a[href^="#"]').click(function () { 
+			    elementClick = $(this).attr("href");
+				destination = $(elementClick).offset().top - 40;
+				if($.browser.safari){
+				$('body').animate( { scrollTop: destination }, 1000 );
+				} else {
+			    	$('html').animate( { scrollTop: destination }, 1000 );
+				}
+				return false;
+		   });
+		});
+	   </script>
+        
+        <!-- Музыка -->
+        <script>
+var audio, playbtn, mutebtn, seek_bar;
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "music/deepmp3-ru-christoffer-franzen-winter.mp3";
+	audio.loop = false;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	mutebtn.addEventListener("click", mute);
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+		    playbtn.style.background = "url(images/pause.png) no-repeat";
+	    } else {
+		    audio.pause();
+		    playbtn.style.background = "url(images/play.png) no-repeat";
+	    }
+	}
+	function mute(){
+		if(audio.muted){
+		    audio.muted = false;
+		    mutebtn.style.background = "url(img/iconmonstr-audio-8-16.png) no-repeat";
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.background = "url(img/iconmonstr-audio-10-16.png) no-repeat";
+	    }
+	}
+}
+window.addEventListener("load", initAudioPlayer);
+</script>
+   
+    <!-- Карта Yandex -->
+       <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                hintContent: 'Москва!',
+                balloonContent: 'Столица России'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    
+    </head>
+    <body>
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/foggy.jpg">
+            <header class="clearfix">
+                <div class="wrapper">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#history">История</a>
+                            </li>
+                            <li>
+                                <a href="#ser">Услуги</a>
+                            </li>
+                            <li>
+                                <a href="#gal">Галерея</a>
+                            </li>
+                            <li class="made">
+                                <a href="#fo">Сделать заказ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                    <div id="playpausebtn"></div>
+                    <button id="mutebtn"></button>
+            </header>
+
+            <div class="main">
+                <div class="wrapper">
+                    <h1>Валенки-шептуны ручной работы</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, amet.</h2>
+                    <div class="see_more"><a href="#history">Узнать больше</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about">
+            <div class="wrapper">
+                <h3 id="history">История</h3>
+                <p>Давным-давно на Руси существовало поверье, что если повесить валенки-шептуны за входной дверь дома до рассвета солнца, рано-рано утром, положить в один валенок монету, а в другой зерно пшеницы, то в дом придет богатство и достаток. А "шептунами" валенки назывались потому, что в них можно было нашептывать свои желания и они сбывались. Если вы не верите в обереги, то можете использовать эти декоративные валенки, как сувенир, повесить как елочную игрушку,носить как подвеску на сумке или повесить в машине.</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <div class="wrapper">
+                <h3 id="ser">Наши услуги</h3>
+                <div class="services">
+                    <div class="service_item">
+                        <img src="img/iconmonstr-flickr-5-96.png" alt="сервис">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magni.</p>
+                    </div>
+                    <div class="service_item">
+                        <img src="img/iconmonstr-stackoverflow-5-96.png" alt="сервис">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magni.</p>
+                    </div>
+                    <div class="service_item">
+                        <img src="img/iconmonstr-xing-5-96.png" alt="сервис">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery">
+            <div class="wrapper">
+                <h3 id="gal">Галерея</h3>
+                <div class="gall">
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                    <div class="gall_item">
+                        <img src="img/foggy.jpg" alt="valenok">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact">
+          <div class="wrapper">
+               <h3 id="fo">Оформите заказ</h3>
+                    <form action="/" method="post">
+                        <div class="input_items">
+                            <input type="text" name="name" placeholder="Имя">
+                            <input type="text" name="surname" placeholder="Фамилия">
+                            <input type="text" name="mail" placeholder="email">
+                        </div>
+                        <div class="form_area">
+                            <textarea name="" id="p_h" placeholder="Укажите id выбранного товара."></textarea>
+                        </div>
+                    </form>
+                    <div class="sub">
+                        <div class="sub_item">
+                            <h5>Отправить</h5>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/foggy.jpg">
+             <div class="map_item">
+                 <h3>г. Москва, ул. Колотушкина, д. 7</h3>
+             </div>
+             <div id="map"></div>
+       
+        
+        <footer>
+            <img src="img/iconmonstr-facebook-4-32.png" alt="facebook">
+            <img src="img/iconmonstr-vk-4-32.png" alt="vk">
+            <img src="img/iconmonstr-google-plus-4-32.png" alt="google">
+            <img src="img/iconmonstr-instagram-14-32.png" alt="instagram">
+            <img src="img/iconmonstr-twitter-4-32.png" alt="twitter">
+            <h3> &copy; Made by Maxim Zharkih 2017.</h3>
+            
+        </footer>
+        </div>
+        
+        <!-- Добавляем Parallax effect -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+    </body>
+</html>
